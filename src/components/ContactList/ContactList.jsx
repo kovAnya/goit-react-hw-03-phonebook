@@ -1,5 +1,6 @@
 import { ContactListItem } from 'components/ContactListItem/ContactListItem';
 import { List } from './ContactList.styled';
+import PropTypes from 'prop-types';
 
 export const ContactList = ({ contacts, filterValue, onDelete }) => {
   return (
@@ -20,4 +21,10 @@ export const ContactList = ({ contacts, filterValue, onDelete }) => {
         })}
     </List>
   );
+};
+
+ContactList.propTypes = {
+  contacts: PropTypes.array.isRequired,
+  filterValue: PropTypes.string.isRequired,
+  onDelete: PropTypes.func.isRequired,
 };

@@ -1,4 +1,5 @@
 import { Form, FormLabel, FormBtn } from './ContactForm.styled';
+import PropTypes from 'prop-types';
 
 export const ContactForm = ({ onFormSubmit }) => {
   return (
@@ -22,4 +23,8 @@ export const ContactForm = ({ onFormSubmit }) => {
       <FormBtn type="submit">Add contact</FormBtn>
     </Form>
   );
+};
+
+ContactForm.propTypes = {
+  onFormSubmit: PropTypes.func.isRequired,
 };
